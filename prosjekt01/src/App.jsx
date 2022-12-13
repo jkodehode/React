@@ -30,7 +30,7 @@ function Header() {
     <div className="header">
       <div className="titleBar">
         <input type="text" className="inputSearch" />
-        <h1>Tittel</h1>
+        <h2>Logo</h2>
         <ul className="titleMenu">
           <HeaderItem text="les" icon={iconDocu} link="#" />
           <HeaderItem text="betal" icon={iconDonate} link="#" />
