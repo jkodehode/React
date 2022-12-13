@@ -38,14 +38,22 @@ h1 {
 
 .titleBar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   justify-items: center;
   align-items: center;
 }
 
+@media only screen and (max-width: 700px) {
+  .titleBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
 .titleMenu {
   display: flex;
-  margin: 0;
+  margin: 0 10px;
   padding: 0;
 }
 .titleMenuItem {
@@ -79,7 +87,15 @@ h1 {
   width: 200px;
   border-radius: 15px;
   border: none;
+  background-color: cornsilk;
+  margin: 10px;
+}
+
+.inputSearch:focus {
+  border: solid 3px rgb(160, 160, 160);
   background-color: bisque;
+  outline: none;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .mainMenu {
@@ -91,7 +107,32 @@ h1 {
 
 .menuItem {
   width: 50px;
+  height: 50px;
   animation: logo-spin 2s;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.menuItem:hover {
+  color: white;
+  scale: 1.1;
+  animation: logo-hover 2s;
+}
+
+@keyframes logo-hover {
+  from {
+    scale: 1.1;
+  }
+  to {
+    scale: 0.5;
+  }
 }
 
 /** Main */
@@ -111,17 +152,69 @@ h1 {
   border-radius: 0 0px 10px 10px;
 }
 
-@keyframes logo-spin {
+.footerItem {
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  align-items: center;
+  width: 60px;
+}
+
+.footerItem:hover {
+  scale: 0.8;
+  color: gray;
+  font-weight: 800;
+  animation: footerItem 3s;
+}
+
+.footerTxtItem:hover {
+}
+
+@keyframes footerItem {
   from {
-    transform: rotate(0deg);
+    letter-spacing: normal;
+    scale: 1;
   }
   to {
-    transform: rotate(360deg);
+    letter-spacing: 5px;
+    color: bisque;
+    scale: 1.5;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.footerIcons {
+  width: 30px;
+  margin: 10px 0;
+  height: 20px;
+}
+
+/** UnderFooter */
+
+.underFooter {
+  color: rgb(177, 160, 136);
+  font-weight: 600;
+}
+
+.underFootIcon {
+  width: 30px;
+  height: 30px;
+}
+
+.underFooter p {
+  padding-top: 0px;
+  font-size: 8px;
+  color: rgb(173, 173, 173);
+}
+
+.underFooter h3 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
+} */
