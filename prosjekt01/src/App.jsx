@@ -13,20 +13,6 @@ import iconDocu from "./assets/icons/document.svg";
 import iconDonate from "./assets/icons/donate.svg";
 import "./App.css";
 
-//* Installerte Babel, men ser jeg skulle hatt en import.macro fil?
-// import {
-//   solid,
-//   regular,
-//   brands,
-//   icon,
-// } from "@fortawesome/fontawesome-svg-core/import.macro";
-// module.exports = function (api) {
-//   return {
-//     plugins: ["macros"],
-//   };
-// };
-// <FontAwesomeIcon icon={solid("fa-github")} />
-
 function App() {
   return (
     <div className="App">
