@@ -1,0 +1,16 @@
+:root {
+  background-color: aqua;
+}
+
+.banner {
+  background-color: aqua;
+  border-radius: 10px 10px 0 0;
+}
+
+h2 {
+  color: white;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 10px;
+  text-align: center;
+}
